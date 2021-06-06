@@ -1,0 +1,68 @@
+<html>
+<head>
+    <title>jQuery</title>
+	
+    <link rel="stylesheet" href="Jquery.css">
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $(".add-row").click(function () {
+            var id = $("#id").val();
+            var name = $("#name").val();
+            var lastname = $("#lastname").val();
+            var tel = $("#tel").val();
+            var adres = $("#adres").val();
+            var markup = "<tr>   <td>" + id + "</td> <td>" + name + " " +lastname + "</td> <td>" + tel + "</td> <td>" + adres + "</td></tr>";
+            $("table tbody").append(markup);
+        });
+
+    });
+    </script>
+
+	
+	
+</head>
+
+
+<body>
+
+    <form style="float: left; margin-bottom: 20px;">
+        <div style="float: left;width: 190px;">
+           <font color="red"> AD:</font><input type="text" id="name" placeholder="Ad"> <br />
+           <font color="red">SOYAD:</font><input type="text" id="lastname" placeholder="Soyad"> <br />
+           <font color="red">YAŞ:</font><input type="number" id="age" placeholder="Yaş">
+        </div>
+
+        <div style="float: left;width: 230px;">
+            <font color="red">E-MAİL:</font><input type="text" id="E-MAİL" placeholder="E-mail"><br />
+            <font color="red">ADRES:</font><textarea id="adres" rows="5" cols="22" placeholder="Adres"></textarea>
+            <input type="button" class="add-row" value="Kayıt Ol">
+        </div>
+    </form>
+	
+	<center>
+    <table>
+        <thead>
+            <tr>
+                <th>Yaş</th>
+                <th>Ad-Soyad</th>
+                <th>E-mail</th>
+                <th>Adres</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                
+            </tr>
+        </tbody>
+    </table>
+	</center>
+	
+	
+	
+	
+</body>
+
+
+</html>
